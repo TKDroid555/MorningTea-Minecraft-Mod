@@ -1,0 +1,7 @@
+{
+  "item.tea.drink": {
+    "sounds": [
+      "morning_tea:item/tea_sip"
+    ]
+  }
+}
