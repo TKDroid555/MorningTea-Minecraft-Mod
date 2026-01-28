@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "PPP",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "morning_tea:napkin"
+  }
+}

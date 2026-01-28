@@ -1,5 +1,6 @@
 package io.github.TKDroid555.Items.custom;
 
+import io.github.TKDroid555.Effects.ModEffects;
 import io.github.TKDroid555.sounds.items.ModSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -33,9 +34,7 @@ public class BitterLeafTeaItem extends Item {
         {
             if (livingEntity instanceof Player player)
             {
-                if (player.getFoodData().getFoodLevel() > 6)
-                    player.getFoodData().setFoodLevel(6);
-                player.playSound(SoundEvents.GENERIC_EAT, 1.0F, 1);
+                player.addEffect(new MobEffectInstance(ModEffects.APPETITE_EFFECT.get(),2400, 0, false, false, true));
             }
         }
         if (livingEntity instanceof ServerPlayer serverplayer) {
@@ -84,6 +83,6 @@ public class BitterLeafTeaItem extends Item {
     @Override
     public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> components, TooltipFlag p_41424_) {
         super.appendHoverText(p_41421_, p_41422_, components, p_41424_);
-        components.add(Component.translatable("item.morning_tea.bitter_leaf_tea.tooltip").withStyle(ChatFormatting.GRAY));
+        components.add(Component.translatable("item.morning_tea.bitter_leaf_tea.tooltip").withStyle(ChatFormatting.BLUE));
     }
 }

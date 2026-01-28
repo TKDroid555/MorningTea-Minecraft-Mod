@@ -23,8 +23,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class IronBoozeItem extends Item {
-    public IronBoozeItem(Properties properties) {super(properties);}
+public class BoozeItem extends Item {
+    public BoozeItem(Properties properties) {super(properties);}
     private static final int DRINK_DURATION = 32;
 
     @Override
@@ -33,8 +33,7 @@ public class IronBoozeItem extends Item {
         {
             if (livingEntity instanceof Player player)
             {
-                player.addEffect(new MobEffectInstance(ModEffects.IRON_GUT_EFFECT.get(),1200, 0, false, true));
-                player.addEffect(new MobEffectInstance(ModEffects.DRUNK_EFFECT.get(),100, 0, false, true));
+                player.addEffect(new MobEffectInstance(ModEffects.DRUNK_EFFECT.get(),900, 0, false, true));
                 player.playSound(SoundEvents.GENERIC_EAT, 1.0F, 1);
             }
         }
@@ -84,6 +83,6 @@ public class IronBoozeItem extends Item {
     @Override
     public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> components, TooltipFlag p_41424_) {
         super.appendHoverText(p_41421_, p_41422_, components, p_41424_);
-        components.add(Component.translatable("item.morning_tea.iron_booze.tooltip").withStyle(ChatFormatting.GRAY));
+        components.add(Component.translatable("item.morning_tea.booze.tooltip").withStyle(ChatFormatting.GRAY));
     }
 }

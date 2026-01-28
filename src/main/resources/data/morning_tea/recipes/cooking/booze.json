@@ -13,7 +13,7 @@
       "item" : "minecraft:wheat"
     },
     {
-      "item" : "minecraft:chicken"
+      "tag" : "forge:raw_chicken"
     },
     {
       "item" : "minecraft:iron_nugget"
