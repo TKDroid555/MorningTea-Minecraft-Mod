@@ -39,6 +39,7 @@ public class MorningTea {
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.BITTER_LEAF_TEA);
             event.accept(ModItems.BEER);
+            event.accept(ModItems.IRON_BOOZE);
         }
     }
 }

@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "ingredients": [
+    {
+      "item" : "minecraft:wheat"
+    },
+    {
+      "item" : "minecraft:chicken"
+    },
+    {
+      "item" : "minecraft:iron_nugget"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "morning_tea:iron_booze"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

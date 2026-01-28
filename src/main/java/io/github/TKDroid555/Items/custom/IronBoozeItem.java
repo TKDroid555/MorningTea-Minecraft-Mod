@@ -1,7 +1,6 @@
 package io.github.TKDroid555.Items.custom;
 
 import io.github.TKDroid555.Effects.ModEffects;
-import io.github.TKDroid555.Effects.custom.DrunkEffect;
 import io.github.TKDroid555.sounds.items.ModSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -9,12 +8,11 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -25,8 +23,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class BeerItem extends Item {
-    public BeerItem(Properties properties) {super(properties);}
+public class IronBoozeItem extends Item {
+    public IronBoozeItem(Properties properties) {super(properties);}
     private static final int DRINK_DURATION = 32;
 
     @Override
@@ -35,9 +33,9 @@ public class BeerItem extends Item {
         {
             if (livingEntity instanceof Player player)
             {
-                livingEntity.addEffect(new MobEffectInstance(
-                        ModEffects.DRUNK_EFFECT.get(), 600, 0, false, true
-                ) );
+                player.addEffect(new MobEffectInstance(ModEffects.IRON_GUT_EFFECT.get(),1200, 0, false, true));
+                player.addEffect(new MobEffectInstance(ModEffects.DRUNK_EFFECT.get(),100, 0, false, true));
+                player.playSound(SoundEvents.GENERIC_EAT, 1.0F, 1);
             }
         }
         if (livingEntity instanceof ServerPlayer serverplayer) {
@@ -86,6 +84,6 @@ public class BeerItem extends Item {
     @Override
     public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> components, TooltipFlag p_41424_) {
         super.appendHoverText(p_41421_, p_41422_, components, p_41424_);
-        components.add(Component.translatable("item.morning_tea.beer.tooltip").withStyle(ChatFormatting.GRAY));
+        components.add(Component.translatable("item.morning_tea.iron_booze.tooltip").withStyle(ChatFormatting.GRAY));
     }
 }

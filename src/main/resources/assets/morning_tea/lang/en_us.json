@@ -1,5 +1,14 @@
 {
   "item.morning_tea.bitter_leaf_tea" : "Bitter Leaf Tea",
+  "item.morning_tea.bitter_leaf_tea.tooltip" : "Makes you hungry.",
+
   "item.morning_tea.beer" : "Beer",
-  "effect.morning_tea.drunk" : "Drunk"
+  "item.morning_tea.beer.tooltip" : "Makes you drunk like a dog.",
+
+  "item.morning_tea.iron_booze" : "Iron Booze",
+  "item.morning_tea.iron_booze.tooltip" : "Prevents hunger from filling up.",
+
+
+  "effect.morning_tea.drunk" : "Drunk",
+  "effect.morning_tea.iron_gut" : "Iron Gut"
 }

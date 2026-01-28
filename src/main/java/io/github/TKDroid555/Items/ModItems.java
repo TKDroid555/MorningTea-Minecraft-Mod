@@ -2,6 +2,7 @@ package io.github.TKDroid555.Items;
 
 import io.github.TKDroid555.Items.custom.BeerItem;
 import io.github.TKDroid555.Items.custom.BitterLeafTeaItem;
+import io.github.TKDroid555.Items.custom.IronBoozeItem;
 import io.github.TKDroid555.MorningTea;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,8 @@ public class ModItems {
             () -> new BitterLeafTeaItem( new BitterLeafTeaItem.Properties().stacksTo(16)));
     public static final RegistryObject<Item> BEER = ITEMS.register("beer",
             () -> new BeerItem( new BeerItem.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> IRON_BOOZE = ITEMS.register("iron_booze",
+            () -> new IronBoozeItem( new IronBoozeItem.Properties().stacksTo(16)));
 
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}
 }

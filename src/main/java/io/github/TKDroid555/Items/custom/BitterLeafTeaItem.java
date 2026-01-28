@@ -1,8 +1,10 @@
 package io.github.TKDroid555.Items.custom;
 
 import io.github.TKDroid555.sounds.items.ModSounds;
+import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -18,6 +20,8 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.fluids.capability.wrappers.FluidBucketWrapper;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class BitterLeafTeaItem extends Item {
     public BitterLeafTeaItem(Properties properties) {super(properties);}
@@ -75,5 +79,11 @@ public class BitterLeafTeaItem extends Item {
 
     public ICapabilityProvider initCapabilities(ItemStack stack, @Nullable CompoundTag nbt) {
         return new FluidBucketWrapper(stack);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> components, TooltipFlag p_41424_) {
+        super.appendHoverText(p_41421_, p_41422_, components, p_41424_);
+        components.add(Component.translatable("item.morning_tea.bitter_leaf_tea.tooltip").withStyle(ChatFormatting.GRAY));
     }
 }
