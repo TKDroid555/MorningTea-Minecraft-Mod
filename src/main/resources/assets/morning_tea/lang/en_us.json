@@ -1,14 +1,15 @@
 {
   "item.morning_tea.bitter_leaf_tea" : "Bitter Leaf Tea",
-  "item.morning_tea.bitter_leaf_tea.tooltip" : "Appetite 02:00",
+  "item.morning_tea.bitter_leaf_tea.tooltip" : "Appetite (02:00)",
 
   "item.morning_tea.beer" : "Beer",
-  "item.morning_tea.beer.tooltip" : "Makes you drunk",
+  "item.morning_tea.beer.tooltip" : "Drunk (00:30)",
 
   "item.morning_tea.booze" : "Booze",
-  "item.morning_tea.booze.tooltip" : "Makes you very drunk",
+  "item.morning_tea.booze.tooltip" : "Drunk (00:45)",
 
   "item.morning_tea.napkin" : "Napkin",
+  "item.morning_tea.napkin.tooltip" : "Never feel full.",
 
   "effect.morning_tea.drunk" : "Drunk",
   "effect.morning_tea.appetite" : "Appetite",

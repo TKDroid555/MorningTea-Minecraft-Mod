@@ -1,6 +1,6 @@
 {
   "type": "farmersdelight:cooking",
-  "cookingtime": 200,
+  "cookingtime": 800,
   "experience": 1.0,
   "conditions": [
     {
@@ -13,15 +13,15 @@
       "item" : "minecraft:wheat"
     },
     {
-      "tag" : "forge:raw_chicken"
+      "item" : "minecraft:sugar"
     },
     {
-      "item" : "minecraft:iron_nugget"
+      "tag" : "forge:mushrooms"
     }
   ],
   "recipe_book_tab": "drinks",
   "result": {
-    "item": "morning_tea:iron_booze"
+    "item": "morning_tea:booze"
   },
   "container": {
     "item": "minecraft:glass_bottle"
