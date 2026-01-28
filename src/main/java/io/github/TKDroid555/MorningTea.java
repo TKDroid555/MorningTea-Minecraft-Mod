@@ -1,6 +1,7 @@
 package io.github.TKDroid555;
 
 import com.mojang.logging.LogUtils;
+import io.github.TKDroid555.Effects.ModEffects;
 import io.github.TKDroid555.Items.ModItems;
 import io.github.TKDroid555.sounds.items.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -22,6 +23,7 @@ public class MorningTea {
 
         ModItems.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
@@ -36,6 +38,7 @@ public class MorningTea {
     {
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.BITTER_LEAF_TEA);
+            event.accept(ModItems.BEER);
         }
     }
 }

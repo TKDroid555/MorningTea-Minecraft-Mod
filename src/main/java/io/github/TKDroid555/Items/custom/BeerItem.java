@@ -1,14 +1,16 @@
 package io.github.TKDroid555.Items.custom;
 
+import io.github.TKDroid555.Effects.ModEffects;
+import io.github.TKDroid555.Effects.custom.DrunkEffect;
 import io.github.TKDroid555.sounds.items.ModSounds;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -19,8 +21,8 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.fluids.capability.wrappers.FluidBucketWrapper;
 import org.jetbrains.annotations.Nullable;
 
-public class BitterLeafTeaItem extends Item {
-    public BitterLeafTeaItem(Properties properties) {super(properties);}
+public class BeerItem extends Item {
+    public BeerItem(Properties properties) {super(properties);}
     private static final int DRINK_DURATION = 32;
 
     @Override
@@ -29,9 +31,9 @@ public class BitterLeafTeaItem extends Item {
         {
             if (livingEntity instanceof Player player)
             {
-                if (player.getFoodData().getFoodLevel() > 6)
-                    player.getFoodData().setFoodLevel(6);
-                player.playSound(SoundEvents.GENERIC_EAT, 1.0F, 1);
+                livingEntity.addEffect(new MobEffectInstance(
+                        ModEffects.DRUNK_EFFECT.get(), 600, 0, false, true
+                ) );
             }
         }
         if (livingEntity instanceof ServerPlayer serverplayer) {

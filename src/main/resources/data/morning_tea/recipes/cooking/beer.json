@@ -10,21 +10,18 @@
   ],
   "ingredients": [
     {
-      "tag": "minecraft:leaves"
+      "item" : "minecraft:wheat"
     },
     {
-      "tag": "minecraft:leaves"
+      "item" : "minecraft:wheat"
     },
     {
-      "type": "forge:nbt",
-      "item": "minecraft:potion",
-      "count": 1,
-      "nbt": "{Potion:\"minecraft:water\"}"
+      "item" : "minecraft:sugar"
     }
   ],
   "recipe_book_tab": "drinks",
   "result": {
-    "item": "morning_tea:bitter_leaf_tea"
+    "item": "morning_tea:beer"
   },
   "container": {
     "item": "minecraft:glass_bottle"

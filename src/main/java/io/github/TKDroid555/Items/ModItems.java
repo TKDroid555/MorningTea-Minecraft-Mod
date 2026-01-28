@@ -1,5 +1,6 @@
 package io.github.TKDroid555.Items;
 
+import io.github.TKDroid555.Items.custom.BeerItem;
 import io.github.TKDroid555.Items.custom.BitterLeafTeaItem;
 import io.github.TKDroid555.MorningTea;
 import net.minecraft.world.item.Item;
@@ -13,7 +14,9 @@ public class ModItems {
 
     // Spruce Tea register
     public static final RegistryObject<Item> BITTER_LEAF_TEA = ITEMS.register("bitter_leaf_tea",
-            () -> new BitterLeafTeaItem( new BitterLeafTeaItem.Properties().stacksTo(1)));
+            () -> new BitterLeafTeaItem( new BitterLeafTeaItem.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BEER = ITEMS.register("beer",
+            () -> new BeerItem( new BeerItem.Properties().stacksTo(16)));
 
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}
 }
